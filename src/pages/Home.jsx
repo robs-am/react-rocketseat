@@ -6,9 +6,12 @@ function Home() {
  
 
   return (
-    <div className="App">
+    <>
       <h1>Lista de Presença</h1>
-    </div>
+      <input type="text" placeholder=''/>
+      <button type='button'>Adicionar</button>
+      
+    </>
   )
 }
 
