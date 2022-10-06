@@ -6,6 +6,7 @@
 
 .container > h1 {
     margin: 84px 0 24px;
+    font-weight: 300;
 }
 
 .container > input {
