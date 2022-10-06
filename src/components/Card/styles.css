@@ -1,0 +1,23 @@
+.card {
+    height: 100px;
+    width: 50%;
+    background-color: #735bf2;
+    color: #fff;
+    border-radius: 10px;
+    margin-bottom: 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2.5rem;
+}
+
+.card strong {
+    font-size: 18px;
+}
+
+.card-name, 
+.card-hour {
+    background-color: #735bf2;
+    color: #FFF;
+}
