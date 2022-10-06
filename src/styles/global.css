@@ -1,8 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@300;400,700&display=swap');
 * {
     margin:0 ;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Figtree', sans-serif;
-    
+    background-color: #e4e4e7;
+    color: #3f3f46;
 }
