@@ -17,9 +17,11 @@
     border: none;
     font-size: 16px;
 }
-
+input {
+    background-color: #E5E5E5;
+}
 input:focus {
-    outline:1px inset #bcbcbc4b;
+    outline:1px inset #aaa8a87d;
 }
 
 .container > button {
