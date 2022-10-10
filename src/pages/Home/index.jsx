@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
 import "./styles.css";
 import { Card } from "../../components/Card";
+import { LocalDiningTwoTone } from "@material-ui/icons";
 
 function Home() {
   const [studentName, setStudentName] = useState("");
   const [students, setStudents] = useState([]);
-  const [user, setUser] = useState({name:'', avatar:'', public_repos:'', location: ''})
+  const [user, setUser] = useState({name:'', avatar:'', repositories:'', location: ''})
 
   function handleAddStudent() {
     const newStudent = {
@@ -24,7 +25,12 @@ function Home() {
       fetch('https://api.github.com/users/robs-am')
       .then(response => response.json())
       .then(data => {
-
+          setUser({
+          name: data.name,
+          avatar: data.avatar_url,
+          repositories: data.public_repos,
+          location: data.location,
+        })
       })
       
     }, []);
@@ -34,9 +40,15 @@ function Home() {
       <header>
         <h1>Lista de Presença</h1>
 
-        <div>
-          <strong>Roberta</strong>
-          <img src="https://github.com/robs-am.png" alt="foto de perfil" />
+        <div className="card-info">
+          <div className="user">
+            <strong>{user.name}</strong>
+            <img src={user.avatar} alt="foto de perfil" />
+          </div>
+          <div className="info">
+          <span><h5 className="repositories">Public Repositories:</h5><p className="repositories">{user.repositories}</p></span>
+            <p className="location">{user.location}</p>
+          </div>
         </div>
       </header>
 
