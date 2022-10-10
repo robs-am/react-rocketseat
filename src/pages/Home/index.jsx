@@ -1,59 +1,50 @@
-import React, {useState} from 'react'
-import './styles.css';
+import React, { useState } from "react";
+import "./styles.css";
 import { Card } from "../../components/Card";
 
-
 function Home() {
- const [studentName, setStudentName] = useState('');
- const [students, setStudents] = useState ([]);
+  const [studentName, setStudentName] = useState("");
+  const [students, setStudents] = useState([]);
 
- function handleAddStudent(){
+  function handleAddStudent() {
     const newStudent = {
       name: studentName,
-      time: new Date().toLocaleTimeString("pt-br",{
-        hour:"2-digit",
-        minute:"2-digit",
-        second:"2-digit",
-
-      })
+      time: new Date().toLocaleTimeString("pt-br", {
+        hour: "2-digit",
+        minute: "2-digit",
+        second: "2-digit",
+      }),
     };
 
-    setStudents(prevState =>[...prevState, newStudent])
- }
+    setStudents((prevState) => [...prevState, newStudent]);
+  }
 
   return (
-    <div className='container'>
+    <div className="container">
       <header>
-      <h1>Lista de Presença</h1>
-      </header>
-      <div>
-        <strong>Roberta</strong>
-        <img src="" alt='' />
-      </div>
-      
-      
-        <input 
-        type="text" 
-        placeholder='Digite o nome...'
-        onChange={e => setStudentName(e.target.value)}
-        />
-      <div className='input-border'></div>
+        <h1>Lista de Presença</h1>
 
-      <button type='button' onClick={handleAddStudent}>
+        <div>
+          <strong>Roberta</strong>
+          <img src="https://github.com/robs-am.png" alt="foto de perfil" />
+        </div>
+      </header>
+
+      <input
+        type="text"
+        placeholder="Digite o nome..."
+        onChange={(e) => setStudentName(e.target.value)}
+      />
+      <div className="input-border"></div>
+
+      <button type="button" onClick={handleAddStudent}>
         Adicionar
       </button>
-      {
-      students.map(student => <Card
-        key={student.time} 
-        name={student.name}
-         time={student.time} 
-         /> )
-      
-      }
-      
-      
+      {students.map((student) => (
+        <Card key={student.time} name={student.name} time={student.time} />
+      ))}
     </div>
-  )
+  );
 }
 
-export default Home
+export default Home;
