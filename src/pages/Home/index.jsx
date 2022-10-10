@@ -23,7 +23,14 @@ function Home() {
 
   return (
     <div className='container'>
+      <header>
       <h1>Lista de Presença</h1>
+      </header>
+      <div>
+        <strong>Roberta</strong>
+        <img src="" alt='' />
+      </div>
+      
       
         <input 
         type="text" 
@@ -36,7 +43,11 @@ function Home() {
         Adicionar
       </button>
       {
-      students.map(student => <Card name={student.name} time={student.time} /> )
+      students.map(student => <Card
+        key={student.time} 
+        name={student.name}
+         time={student.time} 
+         /> )
       
       }
       
