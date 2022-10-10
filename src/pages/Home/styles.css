@@ -14,7 +14,8 @@
 
 .container > input {
     width: 50%;
-    padding: 24px;
+    padding-inline: 4px;
+    padding-block:10px;
     background: transparent;
     border-radius: 5px;
     border:none;
