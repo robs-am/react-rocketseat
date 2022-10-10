@@ -5,6 +5,7 @@ import { Card } from "../../components/Card";
 function Home() {
   const [studentName, setStudentName] = useState("");
   const [students, setStudents] = useState([]);
+  const [user, setUser] = useState({name:'', avatar:'', public_repos:'', location: ''})
 
   function handleAddStudent() {
     const newStudent = {
@@ -20,7 +21,11 @@ function Home() {
   }
 
     useEffect (() => {
-      
+      fetch('https://api.github.com/users/robs-am')
+      .then(response => response.json())
+      .then(data => {
+
+      })
       
     }, []);
 
