@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./styles.css";
 import { Card } from "../../components/Card";
 
@@ -18,6 +18,11 @@ function Home() {
 
     setStudents((prevState) => [...prevState, newStudent]);
   }
+
+    useEffect (() => {
+      
+      
+    }, []);
 
   return (
     <div className="container">
