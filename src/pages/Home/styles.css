@@ -4,6 +4,7 @@
     display: flex;
     align-items: center;
     flex-direction:column;
+    border-bottom: #ea4c89;
 }
 
 .container > h1 {
@@ -14,24 +15,27 @@
 .container > input {
     width: 50%;
     padding: 24px;
-    background: #e6e6e6;
+    background: transparent;
     border-radius: 5px;
-    border: none;
+    border:none;
+    outline:none;
+   
     font-size: 16px;
 }
-input {
-    background-color: #E5E5E5;
+.input-border {
+    border-bottom:1px solid #ea4c89;
+    width:50%;
 }
 input:focus {
-    outline:1px inset #aaa8a87d;
+    background-color: rgba(255, 255, 255, 0.126);
 }
 
 .container > button {
    width: 50%;
    padding: 24px;
    font-weight: 700; 
-   background: #ea4c89;
-   color: #ffff;
+   background: #be185d;
+   color: #f8f8f8;
    border-radius: 5px;
    margin: 12px 0 84px;
    border: none;
@@ -41,7 +45,7 @@ input:focus {
 }
 
 .container > button:hover {
-    filter:brightness(0.9);
+    filter:brightness(0.8);
    }
 
 
